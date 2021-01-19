@@ -1,0 +1,16 @@
+{
+  "name": "ts",
+  "version": "1.0.0",
+  "description": "TypeScript introduction.",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node-dev --no-notify --respawn index.ts"
+  },
+  "keywords": [],
+  "author": "Emmanuel Hernandez",
+  "license": "MIT",
+  "dependencies": {
+    "ts-node-dev": "^1.1.1",
+    "typescript": "^4.1.3"
+  }
+}
