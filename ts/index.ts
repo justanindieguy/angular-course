@@ -1,20 +1,9 @@
-interface Driveable {
-  speed: number;
-  drive(): string;
+class ValueHolder<T> {
+  value: T;
 }
 
-class Car implements Driveable {
-  speed = 10;
+const numberHolder = new ValueHolder<number>();
+numberHolder.value;
 
-  drive() {
-    return `I am driving at ${this.speed}.`;
-  }
-}
-
-const myCar = new Car();
-
-const startDriving = (vehicle: Driveable) => {
-  vehicle.drive();
-};
-
-startDriving(myCar);
+const stringHolder = new ValueHolder<string>();
+stringHolder.value;
