@@ -10,8 +10,6 @@
 # dependencies
 /node_modules
 package-lock.json
-.editorconfig
-.browserslistrc
 
 # profiling files
 chrome-profiler-events*.json
