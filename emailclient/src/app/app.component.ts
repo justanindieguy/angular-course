@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthService } from './auth/auth.service';
 import { BehaviorSubject } from 'rxjs';
+import { tap, map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -16,5 +17,11 @@ export class AppComponent {
 
   ngOnInit() {
     this.authService.checkAuth().subscribe(() => {});
+  }
+
+  getRoute() {
+    return this.signedin$.pipe<string>(
+      map((authenticated) => (authenticated ? '/inbox' : '/'))
+    );
   }
 }
