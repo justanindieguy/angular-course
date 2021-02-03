@@ -4,8 +4,13 @@
 
 <app-modal (dismiss)="showModal = false" *ngIf="showModal">
   <div modalTitle>Compose</div>
+
   <app-email-form
     (emailSubmit)="onSubmit($event)"
     [email]="email"
   ></app-email-form>
+
+  <ng-container modalFooter>
+    <button (click)="showModal = false" class="ui red button">Close</button>
+  </ng-container>
 </app-modal>
